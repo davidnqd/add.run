@@ -7,12 +7,12 @@ function addInputListener(callback) {
     );
 
     const params = new Proxy(new URLSearchParams(window.location.search), {
-      get: (searchParams, prop) => searchParams.get(prop),
+      get: (searchParams, prop) => searchParams.get(prop)
     });
 
     if (params.q) {
       input.value = params.q;
-      output.innerHTML = callback(params.q);
+      output.innerHTML = callback(input.value);
     }
   });
 }
