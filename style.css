@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-  margin: 0; 
+  margin: 0;
 }
 
 main {
@@ -30,7 +30,6 @@ main {
 }
 
 footer {
-  padding-top: 1rem;
   text-align: center;
 }
 
@@ -80,16 +79,11 @@ a:hover {
   border-radius: 6px;
   font-size: 0.8rem;
   z-index: 1;
-  opacity: 0;
   transition: 0.1s;
 }
 .highlight {
   position: relative;
   flex: 2 1 0;
-}
-.highlight:hover > .clipboard-button {
-  opacity: 1;
-  transition: 0.2s;
 }
 
 #output {
@@ -97,6 +91,7 @@ a:hover {
   resize: both;
   overflow: auto;
   background-color: #323232;
+  margin: 0;
   border-left: 1rem solid green;
   padding-left: 0.5rem;
   border-radius: 0.5rem;
