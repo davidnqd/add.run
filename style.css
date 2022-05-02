@@ -36,7 +36,6 @@ footer {
 textarea {
   white-space: pre;
   overflow-wrap: normal;
-  overflow-x: scroll;
 
   background-color: transparent;
   color: #e8e8e8;
@@ -58,10 +57,18 @@ pre {
   min-height: 10rem;
   overflow-wrap: normal;
   overflow-x: scroll;
+  height: 100%;
+  resize: both;
+  overflow: auto;
+  background-color: #323232;
+  margin: 0;
+  border-left: 1rem solid #326932;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 a {
-  color: #8ab4f8;
+  color: #329532;
   text-decoration: none;
 }
 
@@ -69,7 +76,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.clipboard-button {
+#copy {
   position: absolute;
   right: 0;
   padding: 2px 7px 5px 7px;
@@ -84,17 +91,6 @@ a:hover {
 .highlight {
   position: relative;
   flex: 2 1 0;
-}
-
-#output {
-  height: 100%;
-  resize: both;
-  overflow: auto;
-  background-color: #323232;
-  margin: 0;
-  border-left: 1rem solid green;
-  padding-left: 0.5rem;
-  border-radius: 0.5rem;
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
@@ -118,24 +114,13 @@ a:hover {
   visibility: visible; /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
   However, delay the fade out process for 2.5 seconds */
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 /* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
 @keyframes fadein {
   from {bottom: 0; opacity: 0;}
   to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
 }
 
 @keyframes fadeout {
