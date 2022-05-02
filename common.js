@@ -1,15 +1,19 @@
 function addInputListener(callback) {
   document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('input');
+    const output = document.getElementById('output');
     input.addEventListener('input', (event) =>
-      document.getElementById('output').innerHTML = callback(event.target.value)
+      output.innerHTML = callback(event.target.value)
     );
 
     const params = new Proxy(new URLSearchParams(window.location.search), {
       get: (searchParams, prop) => searchParams.get(prop),
     });
 
-    input.value = params.q;
+    if (params.q) {
+      input.value = params.q;
+      output.innerHTML = callback(params.q);
+    }
   });
 }
 
