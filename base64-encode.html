@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Base65 Encoder - onetool.page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="common.js"></script>
+
+  <script>
+    addInputListener((value) => Base64.encode(value))
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.2/base64.min.js"></script>
+</head>
+
+<body>
+  <h1>Base64 Encode</h1>
+  <main>
+    <p>This tool encodes input using <a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64 ⎋</a> encoding using <a href="https://www.npmjs.com/package/js-base64">js-base64 ⎋</a> which supports UTF-8 strings.
+      This is all done within your browser and the input is not sent to a server. See also <a href="./base64-decode">Base64 Decode</a>.</p>
+    <textarea id="input" placeholder="as you type input here, the output will be shown below" autofocus></textarea>
+    <div class="highlight">
+      <button class="clipboard-button" onclick="copy()">copy</button>
+      <pre id="output"></pre>
+    </div>
+  </main>
+
+  <footer>
+    © 2022 David Duong
+  </footer>
+
+  <div id="snackbar" />
+</body>
+
+</html>
