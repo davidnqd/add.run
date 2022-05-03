@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Index
+title: Tools
 description: A collection of tools which run within your browser.
 ---
 
