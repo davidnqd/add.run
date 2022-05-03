@@ -16,7 +16,6 @@
   <h1>{{ page.title | downcase }}</h1>
   <main>
     {{ content }}
-    <textarea id="input" placeholder="as you type input here, the output will be shown below" autofocus></textarea>
     <div class="highlight">
       <button id="copy" onclick="copy()">copy</button>
       <pre id="output"></pre>
@@ -32,7 +31,7 @@
     <script src="{{ script }}"></script>
   {% endfor %}
   <script>
-    addInputListener((value) => {{ page.handler | default: '' }});
+    generate(() => {{ page.handler | default: '' }});
   </script>
 </body>
 

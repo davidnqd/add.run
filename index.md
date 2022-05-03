@@ -13,3 +13,7 @@ Base64:
 JSON supersets:
 
 [JSON to YAML Converter](/json-to-yaml) [YAML to JSON Converter](/yaml-to-json)
+
+Other:
+
+[Generate UUID](/generate-uuid)
