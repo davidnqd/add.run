@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ page.title }} - onetool.page</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <script src="/assets/js/common.js"></script>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    main {
+      margin: 0 auto;
+    }
+    a {
+      display: block;
+      border: 1px solid;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      vertical-align: middle;
+      min-width: 3rem;
+      line-height: 3rem;
+      margin: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>{{ page.title | downcase }}</h1>
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    © 2022 David Duong
+  </footer>
+
+  <div id="snackbar" />
+</body>
+
+</html>
