@@ -1,7 +1,7 @@
 function generate(callback) {
   document.addEventListener('DOMContentLoaded', () => {
     const output = document.getElementById('output');
-    output.innerHTML = callback(event.target.value)
+    output.innerHTML = await callback(event.target.value)
   });
 }
 
@@ -15,7 +15,7 @@ function addInputListener(callback) {
 
     if (params.q) {
       input.value = params.q;
-      output.innerHTML = callback(input.value);
+      output.innerHTML = await callback(input.value);
     }
   });
 }
