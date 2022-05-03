@@ -9,18 +9,41 @@
   <link rel="stylesheet" href="style.css">
 
   <script src="common.js"></script>
+  <style>
+    body {
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+    fieldset {
+      margin: 1rem;
+      border: 0;
+    }
+    fieldset a {
+      display: block;
+      border: 1px solid;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      vertical-align: middle;
+      min-width: 3rem;
+      line-height: 3rem;
+      margin: 1rem;
+      text-align: center;
+    }
+  </style>
 </head>
 
-<body>
+<body style="padding-left: 10rem; padding-right: 10rem">
   <h1>onetool.page</h1>
   <main>
     <p>This project contains one tool pages. These run within your browser and input is not sent to any servers.</p>
-    <ul>
-      <li><a href="./base64-encoder">Base64 Encoder</a></li>
-      <li><a href="./base64-decoder">Base64 Decoder</a></li>
-      <li><a href="./json-to-yaml">JSON to YAML Converter</a></li>
-      <li><a href="./yaml-to-json">YAML to JSON Converter</a></li>
-    </ul>
+    <fieldset>
+     <legend>Base64:</legend>
+     <a href="./base64-encoder">Base64 Encoder</a> <a href="./base64-decoder">Base64 Decoder</a>
+    </fieldset>
+    <fieldset>
+     <legend>JSON supersets:</legend>
+     <a href="./json-to-yaml">JSON to YAML Converter</a> <a href="./yaml-to-json">YAML to JSON Converter</a>
+    </fieldset>
   </main>
 
   <footer>
