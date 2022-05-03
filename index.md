@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Tools
+title: oneToolPage
 description: A collection of tools which run within your browser.
 ---
 
@@ -10,9 +10,17 @@ Base64:
 
 [Base64 Encoder](/base64-encoder) [Base64 Decoder](/base64-decoder)
 
-JSON supersets:
+JSON / YAML:
 
 [JSON to YAML Converter](/json-to-yaml) [YAML to JSON Converter](/yaml-to-json)
+
+SHA Digests:
+
+[SHA-1-Digest](/sha-1-digest)
+[SHA-256-Digest](/sha-256-digest)
+[SHA-384-Digest](/sha-384-digest)
+[SHA-512-Digest](/sha-512-digest)
+
 
 Other:
 

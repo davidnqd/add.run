@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <h1>{{ page.title | downcase }}</h1>
+  <h1>{{ page.title }}</h1>
   <main>
     {{ content }}
     <div class="highlight">
@@ -31,7 +31,7 @@
     <script src="{{ script }}"></script>
   {% endfor %}
   <script>
-    generate(() => {{ page.handler | default: '' }});
+    generate(async () => {{ page.handler | default: '' }});
   </script>
 </body>
 

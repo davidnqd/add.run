@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <h1>{{ page.title | downcase }}</h1>
+  <h1>{{ page.title }}</h1>
   <main>
     {{ content }}
     <textarea id="input" placeholder="as you type input here, the output will be shown below" autofocus></textarea>
@@ -32,7 +32,7 @@
     <script src="{{ script }}"></script>
   {% endfor %}
   <script>
-    addInputListener((value) => {{ page.handler | default: '' }});
+    addInputListener(async (value) => {{ page.handler | default: '' }});
   </script>
 </body>
 

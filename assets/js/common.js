@@ -9,7 +9,7 @@ function addInputListener(callback) {
   document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('input');
     const output = document.getElementById('output');
-    input.addEventListener('input', (event) => output.innerHTML = callback(event.target.value));
+    input.addEventListener('input', async (event) => output.innerHTML = await callback(event.target.value));
 
     const params = new Proxy(new URLSearchParams(window.location.search), { get: (searchParams, prop) => searchParams.get(prop) });
 
