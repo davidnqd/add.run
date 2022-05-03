@@ -1,10 +1,10 @@
 ---
 layout: index
-title: oneToolPage
+title: add.run
 description: A collection of tools which run within your browser.
 ---
 
-onetool.page collection of mobile-friendly tools which execute entirely within up-to-date browsers.
+add.run is a collection of mobile-friendly tools which execute entirely within up-to-date browsers.
 
 Base64:
 
@@ -21,7 +21,6 @@ Crypto Digests:
 [SHA-256-Digest](/sha-256-digest)
 [SHA-384-Digest](/sha-384-digest)
 [SHA-512-Digest](/sha-512-digest)
-
 
 Other:
 
