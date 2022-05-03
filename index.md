@@ -4,7 +4,7 @@ title: oneToolPage
 description: A collection of tools which run within your browser.
 ---
 
-onetool.page collection of tools which run within your browser. Typed input is not sent to any servers.
+onetool.page collection of mobile-friendly tools which execute entirely within up-to-date browsers.
 
 Base64:
 
@@ -14,8 +14,9 @@ JSON / YAML:
 
 [JSON to YAML Converter](/json-to-yaml) [YAML to JSON Converter](/yaml-to-json)
 
-SHA Digests:
+Crypto Digests:
 
+[MD5-Digest](/md5-digest)
 [SHA-1-Digest](/sha-1-digest)
 [SHA-256-Digest](/sha-256-digest)
 [SHA-384-Digest](/sha-384-digest)
