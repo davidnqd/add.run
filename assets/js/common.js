@@ -1,12 +1,12 @@
 function generate(callback) {
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', async () => {
     const output = document.getElementById('output');
     output.innerHTML = await callback(event.target.value)
   });
 }
 
 function addInputListener(callback) {
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', async () => {
     const input = document.getElementById('input');
     const output = document.getElementById('output');
     input.addEventListener('input', async (event) => output.innerHTML = await callback(event.target.value));
