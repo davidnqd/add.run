@@ -8,4 +8,4 @@ handler: md5(value)
 ---
 
 
-This tool generates a [MD5 ⎋](https://en.wikipedia.org/wiki/MD5) digest.  Check out the [other tools](/).
+This tool generates a [MD5 ⎋](https://en.wikipedia.org/wiki/MD5) digest. 

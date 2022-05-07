@@ -6,4 +6,4 @@ handler: crypto.subtle.digest('SHA-384', new TextEncoder().encode(value)).then(h
 ---
 
 
-This tool generates a [SHA-384 ⎋](https://en.wikipedia.org/wiki/SHA-2) digest.  Check out the [other tools](/).
+This tool generates a [SHA-384 ⎋](https://en.wikipedia.org/wiki/SHA-2) digest. 

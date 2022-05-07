@@ -22,6 +22,17 @@ body {
 
 h1 {
   margin: 0;
+  text-align: right;
+}
+
+header a {
+  font-size: 2em;
+  font-weight: bold;
+  float: left;
+}
+
+header a:hover {
+  text-decoration: none;
 }
 
 main {

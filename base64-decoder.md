@@ -7,4 +7,4 @@ scripts:
 handler: Base64.decode(value)
 ---
 
-This tool decodes input using [Base64 ⎋](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding using [js-base64 ⎋](https://github.com/dankogai/js-base64#readme) which supports UTF-8 strings.  Check out the [Base64 Encoder](/base64-encoder) or [other tools](/).
+This tool decodes input using [Base64 ⎋](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding using [js-base64 ⎋](https://github.com/dankogai/js-base64#readme) which supports UTF-8 strings.  Check out the [Base64 Encoder](/base64-encoder).

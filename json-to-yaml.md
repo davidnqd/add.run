@@ -9,4 +9,4 @@ handler: jsyaml.dump(JSON5.parse(value))
 ---
 
 This tool converts [JSON ⎋](https://www.json.org/json-en.html) to [YAML ⎋](https://yaml.org/).
-  Check out the [YAML to JSON Converter](yaml-to-json) or [other tools](/).
+  Check out the [YAML to JSON Converter](yaml-to-json).
