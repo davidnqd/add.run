@@ -10,6 +10,24 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 
   <script src="/assets/js/common.js"></script>
+  <style>
+    pre {
+      text-align: center;
+      font-size: 2rem;
+      padding-top: 0.5rem;
+    }
+    .generate {
+      border: 1px solid;
+      font-weight: bold;
+      font-size: 2rem;
+      border-radius: 0.5rem;
+      min-width: 3rem;
+      line-height: 3rem;
+      margin: 1rem;
+      background-color: #222;
+      color: #5a965a;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,9 +37,10 @@
   </header>
   <main>
     {{ content }}
+    <button class="generate" onclick="generate(async () => {{ page.handler | default: '' }})">Generate 🔄</button>
     <div class="highlight">
       <button id="copy" onclick="copy()">copy</button>
-      <pre id="output"></pre>
+      <pre onClick="" id="output"></pre>
     </div>
   </main>
 

@@ -16,11 +16,11 @@ JSON / YAML:
 
 Crypto Digests:
 
-[MD5-Digest](/md5-digest)
-[SHA-1-Digest](/sha-1-digest)
-[SHA-256-Digest](/sha-256-digest)
-[SHA-384-Digest](/sha-384-digest)
-[SHA-512-Digest](/sha-512-digest)
+[MD5](/md5-digest)
+[SHA-1](/sha-1-digest)
+[SHA-256](/sha-256-digest)
+[SHA-384](/sha-384-digest)
+[SHA-512](/sha-512-digest)
 
 Other:
 

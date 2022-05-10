@@ -1,8 +1,8 @@
-function generate(callback) {
-  document.addEventListener('DOMContentLoaded', async () => {
+async function generate(callback) {
+  //document.addEventListener('DOMContentLoaded', async () => {
     const output = document.getElementById('output');
-    output.innerHTML = await callback(event.target.value)
-  });
+    output.innerHTML = await callback();
+  //});
 }
 
 function addInputListener(callback) {

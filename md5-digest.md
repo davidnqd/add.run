@@ -7,5 +7,4 @@ scripts:
 handler: md5(value)
 ---
 
-
-This tool generates a [MD5 ⎋](https://en.wikipedia.org/wiki/MD5) digest. 
+Generate your [MD5 ⎋](https://en.wikipedia.org/wiki/MD5) digest.

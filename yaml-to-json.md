@@ -7,5 +7,5 @@ scripts:
 handler: JSON.stringify(jsyaml.load(value))
 ---
 
-This tool converts [JSON ⎋](https://www.json.org/json-en.html) to [YAML ⎋](https://yaml.org/).
+Convert [JSON ⎋](https://www.json.org/json-en.html) to [YAML ⎋](https://yaml.org/).
   Check out the [JSON to YAML Converter](json-to-yaml).
