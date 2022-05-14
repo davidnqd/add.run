@@ -41,17 +41,19 @@
       <script type="text/javascript">
       function createLinks(symbol) {
         document.getElementById("resources").innerHTML = `
-          Open ${symbol} in <a href="https://finance.yahoo.com/quote/${symbol}" target="_blank">Yahoo Finance</a> |
-          <a href="https://www.reuters.com/markets/companies/${symbol}.OQ" target="_blank">Reuters</a> |
-          <a href="https://finviz.com/quote.ashx?t=${symbol}" target="_blank">finviz</a> |
-          <a href="https://www.barchart.com/stocks/quotes/${symbol}/overview" target="_blank">Barchart</a> |
-          <a href="https://www.dataroma.com/m/stock.php?sym=${symbol}" target="_blank">Dataroma</a> |
-          <a href="https://www.earningswhispers.com/stocks/${symbol}" target="_blank">Earnings Whispers</a>
+          Find ${symbol} in
+          <ul>
+            <li><a href="https://finance.yahoo.com/quote/${symbol}" target="_blank">Yahoo Finance</a> [ <a href="https://finance.yahoo.com/quote/${symbol}/key-statistics" target="_blank">Key Statistics</a> | <a href="https://finance.yahoo.com/quote/${symbol}/analysis" target="_blank">Analyst Estimates</a> | <a href="https://finance.yahoo.com/quote/${symbol}/options" target="_blank">Options</a> | <a href="https://finance.yahoo.com/quote/${symbol}/holders" target="_blank">Holders</a> | <a href="https://finance.yahoo.com/quote/${symbol}/insider-transactions" target="_blank">Insider Trading</a> ]</li>
+            <li><a href="https://www.tipranks.com/stocks/${symbol}/forecast" target="_blank">Tip Ranks (Analyst Estimates)</a> [ <a href="https://www.tipranks.com/stocks/${symbol}/stock-analysis" target="_blank">Analyst Ratings</a> | <a href="https://www.tipranks.com/stocks/${symbol}/insider-trading" target="_blank">Insider Trading</a> ]</li>
+            <li><a href="https://finviz.com/quote.ashx?t=${symbol}" target="_blank">finviz</a></li>
+            <li><a href="https://www.barchart.com/stocks/quotes/${symbol}/overview" target="_blank">Barchart</a> [ <a href="https://www.barchart.com/stocks/quotes/${symbol}/analyst-ratings" target="_blank">Analyst Ratings</a> | <a href="https://www.barchart.com/stocks/quotes/${symbol}/earnings-estimates" target="_blank">Analyst Estimates</a> | <a href="https://www.barchart.com/stocks/quotes/${symbol}/options?view=sbs_ohl" target="_blank">Options</a> | <a href="https://www.barchart.com/stocks/quotes/${symbol}/insider-trades" target="_blank">Insider Trading</a> ]</li>
+            <li><a href="https://www.dataroma.com/m/stock.php?sym=${symbol}" target="_blank">Dataroma (Holders &amp; Insider Trading)</a></li>
+          </ul>
         `;
       }
 
       const params = new Proxy(new URLSearchParams(window.location.search), { get: (searchParams, prop) => searchParams.get(prop) });
-      const symbol = params.q || "SPY";
+      const symbol = params.q || "AAPL";
 
       const tv = new TradingView.widget({
         "autosize": true,
@@ -77,7 +79,7 @@
       });
       tv.postMessage.on("quoteUpdate", e => createLinks(e.short_name))
 
-      createLinks(symbol);
+      //createLinks(symbol);
       </script>
     </div>
     <!-- TradingView Widget END -->
