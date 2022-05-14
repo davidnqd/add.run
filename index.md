@@ -22,6 +22,10 @@ Crypto Digests:
 [SHA-384](/sha-384-digest)
 [SHA-512](/sha-512-digest)
 
-Other:
+UUID:
 
 [Generate UUID](/generate-uuid)
+
+Stocks:
+
+[Ticker Symbol Resources](/stock-symbol)
