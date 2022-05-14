@@ -36,7 +36,7 @@
     <!-- TradingView Widget BEGIN -->
     <div id="root" class="tradingview-widget-container">
       <div id="tradingview_8867f"></div>
-      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AMEX-SPY/" rel="noopener" target="_blank"><span class="blue-text">SPY Chart</span></a> by TradingView</div>
+      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener" target="_blank"><span class="blue-text">Chart</span></a> by TradingView</div>
       <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
       <script type="text/javascript">
       function createLinks(symbol) {
@@ -49,9 +49,13 @@
           <a href="https://www.earningswhispers.com/stocks/${symbol}" target="_blank">Earnings Whispers</a>
         `;
       }
+
+      const params = new Proxy(new URLSearchParams(window.location.search), { get: (searchParams, prop) => searchParams.get(prop) });
+      const symbol = params.q || "SPY";
+
       const tv = new TradingView.widget({
         "autosize": true,
-        "symbol": "AMEX:SPY",
+        "symbol": symbol,
         "timezone": "Etc/UTC",
         "theme": "dark",
         "style": "1",
@@ -72,7 +76,8 @@
         "container_id": "tradingview_8867f"
       });
       tv.postMessage.on("quoteUpdate", e => createLinks(e.short_name))
-      createLinks("SPY");
+
+      createLinks(symbol);
       </script>
     </div>
     <!-- TradingView Widget END -->
