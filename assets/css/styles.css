@@ -52,6 +52,10 @@ footer {
   background-color: #111;
 }
 
+textarea, input {
+  outline: none;
+}
+
 textarea {
   white-space: pre;
   overflow-wrap: normal;
@@ -61,7 +65,6 @@ textarea {
   width: 100%;
   border: 0;
   height: 10rem;
-  outline: none;
   flex: 0 0 auto;
 }
 
@@ -74,11 +77,26 @@ button {
   min-height: 3em;
 }
 
+input {
+  border: 0;
+  border-radius: 0.3rem;
+}
+
+fieldset {
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #222222;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+
 pre {
   min-height: 10rem;
   overflow-wrap: normal;
-  overflow-x: scroll;
-  height: 100%;
   resize: both;
   overflow: auto;
   background-color: #323232;
@@ -110,6 +128,7 @@ a:hover {
   transition: 0.1s;
 }
 .highlight {
+  overflow-y: auto;
   position: relative;
   flex: 2 1 0;
 }

@@ -29,3 +29,7 @@ UUID:
 Stocks:
 
 [Ticker Symbol Resources](/stock-symbol)
+
+Crypto:
+
+[Solend.fi Loop Estimator](/crypto-solend-loop-simulator)

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Solend Loop Estimator - add.run</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="/assets/js/common.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="/">&lt; Back</a>
+    <h1>Solend Loop Simulator</h1>
+  </header>
+
+  <fieldset>
+   <legend>Parameters:</legend>
+   <label for="initial">Initial (USD):</label><input type="number" id="initial" name="initial" value="10000" onchange="redraw()"/>
+   <label for="loops">Loops:</label><input type="number" id="loops" name="loops" value="1" onchange="redraw()" />
+   <label for="ltv">LTV:</label><input type="number" id="ltv" name="ltv" value="0.75" onchange="redraw()" />
+   <label for="fee">Solana Transaction Fee ($):</label><input type="number" id="fee" name="fee" value="0.00025" onchange="redraw()" />
+   <input type="button" value="Refresh" onclick="refresh()" />
+  </fieldset>
+  <fieldset>
+    <legend>Tokens:</legend>
+    <label for="supply">Supply:</label><select name="supply" id="supply" onchange="refresh()"></select>
+    <label for="borrow">Borrow:</label><select name="borrow" id="borrow" onchange="refresh()"></select>
+  </fieldset>
+  <main>
+    <p style="font-size: 0.8rem">I created this simulator for my personal use to estimate <a href="https://solend.fi/" target="_blank">Solend</a> rewards after one year of <a href="https://docs.marinade.finance/marinade-protocol/system-overview/msol-token" target="_blank">mSOL Token</a> - <a href="https://www.investopedia.com/solana-5210472" target="_blank">Solana (SOL)</a> looping assuming rewards and interest rates do not change, which they almost certainly will. The claim was you could stake SOL using <a href="https://marinade.finance/app/staking" target="_blank">Marinade</a> or <a href="https://jup.ag/" target="_blank">jup.ag</a> (whichever is best at the time) to receive mSOL which you lend on Solend. The loaned mSOL then becomes collateral for you to borrow more SOL for you to repeat the process. The idea is that the rewards from Solend and staking SOL will offset the interest on the loan.<br /><br /><b>Disclaimer</b>: This is not an endorsement or criticism by me. After the <a href="https://www.investopedia.com/crypto-crash-what-investors-need-to-know-5272147" target="_blank">LUNA/UST crashed</a> and I decided altcoins just was not for me at this point in time. The value of SOL, Solend rewards and Solend interest rates will change within a year and has already changed since you loaded this page. Please make sure you understand the risk associated with <a href="https://docs.solend.fi/welcometosolend/risks-and-faq">Solend</a> and crypto in general.</p>
+    <div class="highlight">
+      <button id="copy" onclick="copy()">copy</button>
+      <pre id="output"></pre>
+    </div>
+  </main>
+
+  <footer>
+    © 2022 David Duong
+  </footer>
+
+  <script src="/assets/js/crypto-solend-loop-simulator.js"></script>
+</body>
+
+</html>

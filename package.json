@@ -1,0 +1,20 @@
+{
+  "name": "add.run",
+  "version": "1.0.0",
+  "description": "add.run is a collection of mobile-friendly tools which execute entirely within up-to-date browsers.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidnqd/add.run.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidnqd/add.run/issues"
+  },
+  "homepage": "https://add.run"
+}
