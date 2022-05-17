@@ -122,6 +122,7 @@ function redraw() {
   output.append(`--------------------------------------------------------------------------------\n`);
   output.append(`When this page was loaded (${lastReload}), your browser requested the following data from solend.fi and marinade.finance APIs:\n`);
   output.append(jsyaml.dump(apyData) + '\n');
+  output.append(`Initial Supply\n`);
   supply(initialValue, $("#supply option:selected" ).text());
   let sum = Object.values(wallet).reduce((partialSum, a) => partialSum + a, 0);
   output.append(`--------------------------------------------------------------------------------\n`);
