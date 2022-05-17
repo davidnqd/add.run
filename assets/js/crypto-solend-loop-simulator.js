@@ -77,7 +77,7 @@ function cacheValues(values) {
 
 function addToWallet(symbol, amount, ...notes) {
   wallet[symbol] = (wallet[symbol] || 0) + amount;
-  let log = `${symbol.padEnd(20, ' ')} = $${amount}`.padEnd(45, ' ');
+  let log = `${symbol.padEnd(20, ' ')} + $${amount}`.padEnd(45, ' ');
   for (let note of notes) {
     log += ` = ${note}`;
   }
@@ -89,7 +89,7 @@ function supply(limit, symbol) {
   let fee = $('#fee').val() * -1;
   let netAPY = 0;
   addToWallet(symbol, limit, `Supply $${limit} as ${symbol}`);
-  addToWallet('SOL', fee, 'Fee', 'Transaction Fee');
+  addToWallet('SOL', fee, 'Transaction Fee');
   for (const reward in apyData[symbol].supply) {
     const rewardApy = apyData[symbol].supply[reward];
     const rewardValue = limit * rewardApy;
