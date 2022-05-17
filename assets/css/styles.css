@@ -97,6 +97,7 @@ label {
 pre {
   min-height: 10rem;
   overflow-wrap: normal;
+  height: 100%;
   resize: both;
   overflow: auto;
   background-color: #323232;
@@ -128,7 +129,6 @@ a:hover {
   transition: 0.1s;
 }
 .highlight {
-  overflow-y: auto;
   position: relative;
   flex: 2 1 0;
 }
