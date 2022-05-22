@@ -11,6 +11,7 @@ function createLinks(symbol) {
       <li><a href="https://finviz.com/quote.ashx?t=${symbol}" target="_blank">finviz</a> [ <a href="https://finviz.com/screener.ashx?v=111&t=AAPL">Screener</a> ]</li>
       <li><a href="https://www.barchart.com/stocks/quotes/${symbol}/overview" target="_blank">Barchart</a> [ <a href="https://www.barchart.com/stocks/quotes/${symbol}/analyst-ratings" target="_blank">Analyst Ratings</a> | <a href="https://www.barchart.com/stocks/quotes/${symbol}/earnings-estimates" target="_blank">Analyst Estimates</a> | <a href="https://www.barchart.com/stocks/quotes/${symbol}/options?view=sbs_ohl" target="_blank">Options</a> | <a href="https://www.barchart.com/stocks/quotes/${symbol}/insider-trades" target="_blank">Insider Trading</a> ]</li>
       <li><a href="https://www.dataroma.com/m/stock.php?sym=${symbol}" target="_blank">Dataroma (Holders &amp; Insider Trading)</a></li>
+      <li><a href="https://www.earningswhispers.com/stocks/${symbol}" target="_blank">Earnings Whispers</a></li>
     </ul>
   `;
 }
