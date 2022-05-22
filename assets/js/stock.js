@@ -5,6 +5,7 @@ function createLinks(symbol) {
   document.getElementById("resources").innerHTML = `
     Find ${symbol} in
     <ul>
+      <li><a href="https://www.tradingview.com/symbols/${symbol}/ideas?share_your_love=davidnqd" target="_blank">TradingView (Ideas)</a> [ <a href="https://www.tradingview.com/chart/?symbol=${symbol}&share_your_love=davidnqd" target="_blank">Chart</a> ]</li>
       <li><a href="https://finance.yahoo.com/quote/${symbol}" target="_blank">Yahoo Finance</a> [ <a href="https://finance.yahoo.com/quote/${symbol}/key-statistics" target="_blank">Key Statistics</a> | <a href="https://finance.yahoo.com/quote/${symbol}/analysis" target="_blank">Analyst Estimates</a> | <a href="https://finance.yahoo.com/quote/${symbol}/options?straddle=true" target="_blank">Options</a> | <a href="https://finance.yahoo.com/quote/${symbol}/holders" target="_blank">Holders</a> | <a href="https://finance.yahoo.com/quote/${symbol}/insider-transactions" target="_blank">Insider Trading</a> ]</li>
       <li><a href="https://www.tipranks.com/stocks/${symbol}/forecast" target="_blank">Tip Ranks (Analyst Estimates)</a> [ <a href="https://www.tipranks.com/stocks/${symbol}/stock-analysis" target="_blank">Analyst Ratings</a> | <a href="https://www.tipranks.com/stocks/${symbol}/insider-trading" target="_blank">Insider Trading</a> ]</li>
       <li><a href="https://finviz.com/quote.ashx?t=${symbol}" target="_blank">finviz</a> [ <a href="https://finviz.com/screener.ashx?v=111&t=AAPL">Screener</a> ]</li>
