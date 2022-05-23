@@ -12,7 +12,7 @@ Base64:
 
 JavaScript:
 
-[DevTool JavaScript Console Helpers](/javascript-chop-block)
+[DevTool JavaScript Console Helpers](/javascript-devtools)
 [JSON to YAML Converter](/json-to-yaml) [YAML to JSON Converter](/yaml-to-json)
 
 Crypto Digests:
