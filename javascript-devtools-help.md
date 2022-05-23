@@ -8,10 +8,6 @@ back: /javascript-devtools
 The [DevTool JavaScript Console Helpers](/javascript-devtools) includes an editor, an output pane and a
 bunch of helper functions for use when Chrome's DevTools is opened on that page. It may or may not work for other browsers.
 
-## Usage
-
-Navigate to [DevTool JavaScript Console Helpers](/javascript-devtools) and press ⌥⌘J (Mac) or Control+Shift+J (Windows, Linux) to open your browser's DevTools Javascript Console.
-
 ## Helpers
 
 <dl>
