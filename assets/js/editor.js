@@ -42,7 +42,7 @@ function toCodeMirror (element) {
     set: (value) => codeMirror.setValue(String(value))
   });
   Object.defineProperty(codeMirror, 'json', {
-    get: () => JSON.parse(codeMirror.getValue()),
+    get: () => jsyaml.load(codeMirror.getValue()),
     set: (value) => codeMirror.setValue(JSON.stringify(value, null, ' '))
   });
   return codeMirror;
@@ -63,16 +63,13 @@ This page includes an editor, an output pane and a bunch of helper functions for
 For example, make an API call and store the results in the editor:
   editor.json = await fetch( 'https://www.boredapi.com/api/activity' ).then( response => response.json() )
 
-Great! Now let's convert it into YAML by first including the js-yaml library:
-  include('https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js');
-
 Then use js-yaml to convert the JSON to YAML, then add it to output
   output.append( jsyaml.dump( editor.json ) );
 
 Then store and retrieve the last activity in localStorage which will save data across browser sessions
-  localStorage['last'] = editor.value;
+  localStorage.last = editor.value;
   location.reload();
-  editor.value = localStorage['last'];
+  editor.value = localStorage.last;
 `);
 }
 
