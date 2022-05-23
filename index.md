@@ -10,8 +10,9 @@ Base64:
 
 [Base64 Encoder](/base64-encoder) [Base64 Decoder](/base64-decoder)
 
-JSON / YAML:
+JavaScript:
 
+[DevTool JavaScript Console Helpers](/javascript-chop-block)
 [JSON to YAML Converter](/json-to-yaml) [YAML to JSON Converter](/yaml-to-json)
 
 Crypto Digests:

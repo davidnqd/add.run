@@ -1,3 +1,5 @@
+'use strict';
+
 async function generate(callback) {
   //document.addEventListener('DOMContentLoaded', async () => {
     const output = document.getElementById('output');

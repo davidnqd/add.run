@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>DevTool JavaScript Console Helpers - add.run</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="/assets/js/common.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/theme/lesser-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/addon/fold/foldgutter.min.css" />
+  <link rel="stylesheet" href="/assets/css/editor.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/addon/fold/foldcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/addon/fold/foldgutter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/addon/fold/brace-fold.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/addon/display/placeholder.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/mode/javascript/javascript.min.js"></script>
+  <script src="/assets/js/editor.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="/">&lt; Back</a>
+    <h1>DevTool JavaScript Console Helpers</h1>
+  </header>
+
+  <main>
+    <textarea id="editor" name="editor" placeholder="Press ⌥⌘J (Mac) or Control+Shift+J (Windows, Linux) to open your browser's console." autofocus></textarea>
+    <div class="highlight">
+      <button id="copy" onclick="copy()">copy</button>
+      <pre id="output"></pre>
+    </div>
+  </main>
+  <footer>
+    If you want, you can fuel my coding by <a href="https://www.buymeacoffee.com/davidnqd">Buying me a Coffee</a><br/>
+    © 2022 David Duong
+  </footer>
+</body>
+
+</html>
