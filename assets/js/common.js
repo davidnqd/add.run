@@ -24,13 +24,17 @@ function addInputListener(callback) {
 
 async function copy() {
   await navigator.clipboard.writeText(document.getElementById('output').innerHTML);
+  showSnackbar("Output copied to clipboard!");
+}
+
+function showSnackbar(message) {
   // Get the snackbar DIV
-  const snackbar = document.getElementById("snackbar");
+  const snackbar = document.getElementById('snackbar');
 
   // Add the "show" class to DIV
-  snackbar.innerHTML = "Output copied to clipboard!";
-  snackbar.className = "show";
+  snackbar.innerHTML = message;
+  snackbar.className = 'show';
 
   // After 3 seconds, remove the show class from DIV
-  setTimeout(() => snackbar.className = snackbar.className.replace("show", ""), 3000);
+  setTimeout(() => snackbar.className = snackbar.className.replace('show', ''), 3000);
 }

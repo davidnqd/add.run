@@ -1,36 +1,40 @@
 'use strict';
 
+CodeMirror.commands.save = function(insance) {
+  localStorage['.buffer'] = insance.getValue();
+  showSnackbar('Saved buffer to localStorage[".buffer"]');
+};
+
 function toCodeMirror (element) {
   let codeMirror = CodeMirror.fromTextArea(element, {
-    mode: {name: "javascript", json: true},
+    mode: { name: 'javascript', json: true },
     lineNumbers: true,
-    theme: "lesser-dark",
+    theme: 'lesser-dark',
     spellcheck: true,
     foldGutter: true,
     extraKeys: {
-        "Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); },
-        "Tab": "indentMore"
+        'Ctrl-Q': cm => cm.foldCode(cm.getCursor()),
+        'Tab': 'indentMore'
     },
-    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'],
     foldOptions: {
       widget: (from, to) => {
-        var count = undefined;
+        let count = undefined;
 
         // Get open / close token
-        var startToken = '{', endToken = '}';
-        var prevLine = window.editor.getLine(from.line);
+        let startToken = '{', endToken = '}';
+        let prevLine = window.editor.getLine(from.line);
         if (prevLine.lastIndexOf('[') > prevLine.lastIndexOf('{')) {
           startToken = '[', endToken = ']';
         }
 
         // Get json content
-        var internal = window.editor.getRange(from, to);
-        var toParse = startToken + internal + endToken;
+        let internal = window.editor.getRange(from, to);
+        let toParse = startToken + internal + endToken;
 
         // Get key count
         try {
-          var parsed = JSON.parse(toParse);
-          count = Object.keys(parsed).length;
+          count = Object.keys(JSON.parse(toParse)).length;
         } catch(e) { }
 
         return count ? `\u21A4${count}\u21A6` : '\u2194';
@@ -73,8 +77,12 @@ Then store and retrieve the last activity in localStorage which will save data a
 `);
 }
 
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
   window.editor = toCodeMirror(document.getElementById('editor'));
+
+  if (localStorage['.buffer']) {
+    window.editor.value = localStorage['.buffer'];
+  }
 
   motd();
 
