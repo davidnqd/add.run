@@ -29,6 +29,7 @@ UUID:
 
 Stocks:
 
+[Stock Macros](/stock-macro)
 [Ticker Symbol Resources](/stock-symbol)
 
 Crypto:
